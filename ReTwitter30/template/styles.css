@@ -1,0 +1,70 @@
+
+#body{
+
+background: #F2F0F1 url('template/t.ipg') repeat;
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+font-family: 'Amiri', serif;
+}
+#center {
+border: 1px solid #B0D4E5;
+width: 600px;
+height: 490px; 
+margin: 0px auto ;
+margin-top: 10px;
+
+ }
+
+  #center #buttons {
+text-decoration:none;
+		margin-top: 90px;
+ }
+ #center #buttons a{
+		float: right;
+		margin-right: 50px;
+		margin-top: 150px;
+ }
+ 
+ #website{
+margin-right: 50px;
+margin-top: 50px;
+ font-size: 60px;
+ color: #00ACF6;
+ 
+ }
+#buttons #img1{
+
+margin-right: 120px;
+margin-top: 10px;
+
+}
+ #twitter{
+ 	border: 1px solid #B0D4E5;
+  margin-right: 250px;
+  width: 300px;
+  height: 90px;
+  color: #36CFF9;
+
+ }
+ #twitter #twittera{
+ 	margin: 5px 50px;
+   width: 200px;
+  height: 90px;
+  float: right;
+ text-align: right;
+ }
+ #tabletwi{
+ margin-top: 30px;
+ margin-right: 60px;
+width: 500px;
+border: 2px solid #C0DEED ;
+width:500px;
+height:300px;
+overflow: auto;
+
+}
+#cc{
+margin-top: 20px;
+margin-right: 150px;
+
+}
+

@@ -1,0 +1,23 @@
+AuthType Basic
+AuthName "No Downloads"
+AuthUserFile /
+Require valid-user
+
+Order Deny,Allow
+Deny from all
+
+<FilesMatch "\.zip$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<Files *.zip>
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Files>
+
+ErrorDocument 404 https://www.waseethost.com/support
+ErrorDocument 403 https://www.waseethost.com/support
+ErrorDocument 500 https://www.waseethost.com/support
+ErrorDocument 401 https://www.waseethost.com/support

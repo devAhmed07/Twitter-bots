@@ -1,0 +1,65 @@
+ <?php
+  require './../config/dbconfig.php';
+  $sql=mysql_query("SELECT * FROM `website` ") ;
+  $row=mysql_fetch_assoc($sql);
+
+echo '
+ <div id="website">
+ 
+     <form action="website.php" method="POST" class="form-horizontal">
+    <label class="control-label" >إسم الموقع</label>
+      <div class="controls">
+      <input name="text1" type="text1" value="'.$row['website'].'"  placeholder="اسم الموقع">
+      </div>
+
+<br />
+    <label class="control-label" >وصف الموقع</label>
+      <div class="controls">
+      <input name="text2" type="text2" value="'.$row['Description'].'"  placeholder="وصف الموقع">
+</div>
+<br />
+    <label class="control-label" >الكلمات الدليلة</label>
+      <div class="controls">
+      <input name="text3" type="text3" value="'.$row['Tags'].'" placeholder="الكلمات الدليلة">
+</div>
+<br />
+  <label class="control-label" >ماذا سوف تغرد</label>
+      <div class="controls">
+      <input name="text4" type="text4" value="'.$row['Twitter'].'" placeholder="ماذا سوف تغرد">
+</div>
+<br />
+  <label class="control-label" >بريد المدير</label>
+      <div class="controls">
+      <input name="text5" type="text5" value="'.$row['Mail'].'" placeholder="">
+</div>
+<br />
+  <label class="control-label" >API key</label>
+      <div class="controls">
+      <input name="text6" type="text6" value="'.$row['APIkey'].'" placeholder="">
+</div>
+<br />
+  <label class="control-label" >API secret</label>
+      <div class="controls">
+      <input name="text7" type="text7" value="'.$row['APIsecret'].'" placeholder="">
+</div>
+<br />
+  <label class="control-label" >رابط السكربت</label>
+      <div class="controls">
+      <input name="text8" type="text8" value="'.$row['Link'].'" placeholder="">
+</div>
+<br />
+
+    <button type="submit" class="btn"> تحديث البيانات </button>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<br/>
+
+    </form>
+ 
+</div>
+ ';
+
+?>
+
+ 

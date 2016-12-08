@@ -1,0 +1,93 @@
+<?php
+//include
+require_once("./../config/dbconfig.php");
+require_once("./../config/twconfig.php");
+require_once("./../config/twitter.class.php");
+////
+$consumerKey = YOUR_CONSUMER_KEY;
+$consumerSecret = YOUR_CONSUMER_SECRET;
+/////////////
+// SQL
+$source = mysql_query("SELECT * FROM `source` ORDER BY RAND() LIMIT 0 , 1 ");
+$users = mysql_query("SELECT * FROM `users`");
+//$tweet = mysql_query("SELECT * FROM `tweetsT` ORDER BY RAND() LIMIT 0 , 1");
+//SQL
+
+
+// LOOPS source
+//while($row_source = mysql_fetch_assoc($source)){
+$row_source = mysql_fetch_assoc($source);
+// LOOPS users
+while($row_users = mysql_fetch_assoc($users)){
+
+///
+$accessToken = $row_users['accessToken'];
+$accessTokenSecret =$row_users['accessTokenSecret'];
+$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+$status = $twitter->user_timeline($source['name']);
+@$id_str = $status['id_str'];
+@$id_str_2 = $row_source['last_updated'];
+//
+
+
+if($id_str != $id_str_2){
+
+///
+@$getHashtags = getHashtags($status['text']);
+foreach($getHashtags as $Hashtag){
+@$Hashtags .=' '.@$Hashtag;
+}
+///
+
+///////////
+$tweet = mysql_fetch_assoc(mysql_query("SELECT * FROM `tweetsT` ORDER BY RAND() LIMIT 0 , 1  "));
+$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+if(@$Hashtags){
+$oksend = $twitter->send($tweet['tweet'].' '.$Hashtags.'');
+mysql_query("UPDATE `source` SET last_updated = '".$id_str."' WHERE `id` ='".$row_source['id']."'");
+}
+////////////
+
+
+
+}
+
+
+
+  }
+// LOOPS users
+//  }
+// LOOPS source
+
+
+
+
+
+
+
+
+
+
+
+
+
+//while($row_source = mysql_fetch_assoc($source)){
+//while($rows = mysql_fetch_assoc($users)) {
+//$accessToken = $rows['accessToken'];
+//$accessTokenSecret =$rows['accessTokenSecret'];
+//$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+//$status = $twitter->user_timeline($row_source['name']);
+
+/*
+@$getHashtags = getHashtags($status['text']);
+foreach($getHashtags as $arr){
+@$arrx .=' '.@$arr;
+}
+*/
+
+
+
+//$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+//$oksend = $twitter->send($tweet['tweet'].' '.@$arrx.'');
+
+?>

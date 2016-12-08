@@ -1,0 +1,57 @@
+<div id="center">
+  <a style=" margin-top: 20px;margin-right: 90px;" class="btn btn-large disabled" > مراقب المستخدمين:</a>
+  <div id="tabletwi">
+<script language="JavaScript">
+$(function () {
+       $('#select-all').click(function (event) {
+
+           var selected = this.checked;
+           // Iterate each checkbox
+           $(':checkbox').each(function () {    this.checked = selected; });
+
+       });
+    });
+</script>
+   <table class="table table-bordered">
+    <form  action="userDM.php" method="POST" class="form-horizontal">
+    <thead>
+    <tr>
+        <th><input type="checkbox" name="select-all" id="select-all" /> تحديد الكل</th>
+    <th>اسم الحساب المراقب</th>
+    <th> أخر رد</th>
+    <th> تعديلات</th>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+require_once('config/dbconfig.php');
+@$access_token_oauth_token = $_SESSION['access_token']['oauth_token'] ;
+
+$user = mysql_query("SELECT * FROM `reply_user` WHERE `accessToken` LIKE '$access_token_oauth_token' ") or die(mysql_error());
+
+while($rows = mysql_fetch_assoc($user))
+{
+//	$rows['id'] 	$rows[' timestamp'] 	$rows['tweet']
+echo '
+    <tr>
+    <th><input type="checkbox" value="'.$rows['id'].'" name="delet[]" id="delet" /></th>
+    <td>'.$rows['user'].'</td>
+    <td>'.$rows['reply_id'].'</td>
+     <td><a class="btn btn-danger" href="userD.php?id='.$rows['id'].'" > حذف</a> </td>
+    </tr>	
+	';
+}
+?>
+    </tbody>
+    </table>
+
+
+  
+  </div>
+  <div style=" margin-top: 20px;margin-right: 90px;">
+ <button class="btn btn-large btn-danger" type="submit" >حذف المحددين</button>
+  <a class="btn btn-large btn-success" href="userV.php" > إضافة مستخدم</a>
+    <a class="btn btn-large btn-info" href="index.php" > العودة للرئيسية</a>
+  </div>
+    </form>
+</div>

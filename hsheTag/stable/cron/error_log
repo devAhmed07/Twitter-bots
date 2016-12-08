@@ -1,0 +1,5 @@
+[20-Mar-2014 19:29:01 Etc/GMT+3] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/n3n6/public_html/hashtag/cron/cronS.php on line 44
+[20-Mar-2014 20:08:01 Etc/GMT+3] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/n3n6/public_html/hashtag/cron/cronS.php on line 44
+[20-Mar-2014 20:23:02 Etc/GMT+3] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/n3n6/public_html/hashtag/cron/cronS.php on line 44
+[20-Mar-2014 20:29:01 Etc/GMT+3] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/n3n6/public_html/hashtag/cron/cronS.php on line 44
+[20-Mar-2014 20:41:01 Etc/GMT+3] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/n3n6/public_html/hashtag/cron/cronS.php on line 44

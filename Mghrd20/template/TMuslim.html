@@ -1,0 +1,23 @@
+
+
+<div id="center">
+<div style="margin-top: 40px;margin-right: 70px;">
+
+<a  class="btn btn-large btn-info" href="tweet.php"> تغريداتي المجدولة</a>
+<a  class="btn btn-large btn-info" href="tweetT.php"> جدولة تغريدة </a>
+<a  class="btn btn-large btn-info" href="TMuslim.php"> إعدادات التغريدات الإسلامية </a>
+<a  class="btn btn-large btn-danger" href="logout.php?logout"> تسجيل الخروج</a>
+</div>
+
+<form class="TMuslim" style="margin-top: 80px;margin-right: 130px;" action="TMuslimOK.php" method="post">
+<h5 style="width: 392px; " >سوف نغرد عنك من ايات القرآن الكريم و آلأحاديث النبويه الصحيحه من حسابك بتويتر بحد أقصي 5 تغريدات في اليوم تكون لك صدقه جاريه في حياتك وبعد مماتك.</h5>
+<input type="radio" name="date" value="y" <?php if(@$_SESSION['Muslim'] === 'y'){ echo 'checked="checked"'; }else{} ?>  />  أرسل عني تغريدات إسلامية
+<br />
+<input type="radio" name="date" value="n"<?php if(@$_SESSION['Muslim'] === 'n'){ echo 'checked="checked"'; }else{} ?> />  لا ترسل عني غير تغريداتي الخاصة
+
+<br />
+<br />
+<button style="margin-right: 190px;" class="btn btn-large btn-success" name="save" value="save" type="submit">     حـــــــفــــــظ    </button>
+</form>
+
+</div>

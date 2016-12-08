@@ -1,0 +1,62 @@
+
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<div style="margin-top:10px">
+			<div class="container">
+				<div class="panel panel-default" style="margin:0 auto;width:500px">
+					<div class="panel-heading">
+						<h2 class="panel-title">أتصل بنا</h2>
+					</div>
+					<div class="panel-body">
+						<form name="contactform" method="post" action="contactusOk.php" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputName" class="col-lg-2 control-label">الاسم:</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputName" name="inputName" placeholder="اسمك">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail1" class="col-lg-2 control-label">البريد :</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="بريدك">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputSubject" class="col-lg-2 control-label">عنوان الرسالة :</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="عنوان الرسالة">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword1" class="col-lg-2 control-label">محتوى الرسالة :</label>
+								<div class="col-lg-10">
+									<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="رسالتك ....."></textarea>
+								</div>
+							</div>
+                            							<div class="form-group">
+
+								<div class="col-lg-10">
+<img id="captcha" src="Captcha.php" alt="خطأ في عرض كود التحقق" />
+								   <input type="text" name="captcha_code" size="10" maxlength="8" style="direction: rtl" />
+<a href="#" onclick="document.getElementById('captcha').src = 'Captcha.php?s=' + Math.random(); return false;"> [غيّر الصورة] </a>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-offset-2 col-lg-10">
+                                <br />
+									<button type="submit" class="btn btn-default">
+										أرسل الرسالة
+
+                            </button>
+
+                            <a  class="btn btn-large btn-info" href="index.php">عودة للرئيسية</a>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>

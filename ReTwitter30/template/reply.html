@@ -1,0 +1,41 @@
+<div id="center">
+  <a style=" margin-top: 20px;margin-right: 90px;" class="btn btn-large disabled" > الرد التلقائي:</a>
+  <div id="tabletwi">
+
+   <table class="table table-bordered">
+    <thead>
+    <tr>
+    <th> نص الرد</th>
+    <th> تعديلات</th>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+require_once('config/dbconfig.php');
+@$access_token_oauth_token = $_SESSION['access_token']['oauth_token'] ;
+
+$reply = mysql_query("SELECT * FROM `reply` WHERE `accessToken` LIKE '$access_token_oauth_token' ") or die(mysql_error());
+
+while($rows = mysql_fetch_assoc($reply))
+{
+//	$rows['id'] 	$rows[' timestamp'] 	$rows['tweet']
+echo '
+    <tr>
+    <td><textarea style="width: 200px; height: 60px;" rows="4">'.$rows['reply'].'</textarea></td>
+     <td><br /><a class="btn btn-danger" href="replyD.php?id='.$rows['id'].'" > حذفها</a> </td>
+    </tr>	
+	';
+}
+?>
+    </tbody>
+    </table>
+
+
+  
+  </div>
+  <div style=" margin-top: 20px;margin-right: 90px;">
+  <a class="btn btn-large btn-success" href="replyV.php" > رد تلقائي جديد</a>
+    <a class="btn btn-large btn-info" href="index.php" > العودة للرئيسية</a>
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+    <form  action="twiT.php" method="POST" class="form-horizontal">
+
+    <div class="control-group">
+	<h3>  تغريدة جديدة مجدولة</h3>
+    <div class="controls">
+<select name="date" size="1">
+
+<?php
+$t=time();
+for ($i=0; $i<=365; $i++)
+  {
+echo "<option value=\"".date("d-m-Y",$t+(86400*$i))."\">  يوم : ".date("Y-m-d",$t+(86400*$i))."</option>" ;
+  }
+?>
+
+</select>
+<select class="span1" name="timeh" size="1">
+
+<?php
+for ($i=1; $i<=24; $i++){
+echo "<option value=\"".$i."\"> الساعة ".$i."</option>" ;}
+
+?>
+
+</select>
+<select class="span1" name="timem" size="1">
+
+<?php
+
+for ($x=1; $x<=60; $x++){
+echo "<option value=\"".$x."\"> الدقيقة ".$x."</option>" ;}
+
+?>
+
+</select>
+<select class="span1" name="times" size="1">
+
+<?php
+
+for ($x=1; $x<=60; $x++){
+echo "<option value=\"".$x."\"> الثانية ".$x."</option>" ;}
+
+?>
+
+</select>
+    <textarea rows="4" id="tw" name="txtwi" placeholder="غرد هنا" ></textarea>   
+    <img src="./../images/Twitter-Shipping-Box-icon.png" alt="" >
+    </div>
+    </div>
+    <div class="control-group">
+    <div class="controls">
+    <button  type="submit" class="btn">غرد للكل</button>
+    </div>
+    </div>
+    </form>

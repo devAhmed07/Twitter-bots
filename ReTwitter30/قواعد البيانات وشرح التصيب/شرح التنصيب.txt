@@ -1,0 +1,31 @@
+ַב׃בַד זÚבםßד
+״ׁםÞֹ ַבÊהױםָ ׃ובו ַּֿ ַה װֱַ ַבבו
+ַזבַ -
+הׁÝÚ ַבדבÝַÊ זהÝß ײÛ״וַ ַז ַבÚß׃ הÝß ַבײÛ״ ֻד הׁÝוַ
+ַֻהםַ -
+ַהװֱַ ÞַÚֹֿ ָםַהַÊ ּֿםֹֿ ֻד ײÚ ָםַהַÊוַ Ýם ַבדבÝ dbconfig.php
+ֻד הÞזד ָÊהױםָ 
+http://www.XXXXXXXXXXXXX.com/install.php
+
+
+ַֻבַֻ -
+ַÚדב Ê״ָםÞ Úבל ÊזםÊׁ - װַוֿ ַבװֽׁ Ýם ַבַָׁ״ 
+https://www.waseethost.com/support/link.php?id=5
+ֻד ײÚ ַבָםַהַÊ Ýם דבÝ twconfig.php
+
+ַָׁÚַ -
+ַֿ־ב ַבßׁזה cron דה בזֹֽ Êֽßד ַבדזÞÚ ַב׃ם ָהב
+ - ßב ֿÞםÞֹ
+ - ַבַדׁ 
+php -q /home/XXXXX1/public_html/XXXXX2/cronS.php
+
+
+XXXXX1 = ַ׃ד ַבד׃Ê־ֿד בזֹֽ ַב׃ם ָהב
+XXXXX2 = ַ׃ד ַבדּבֿ ַבם Ýםו ַב׃ßָׁÊ
+ַ׀ַ ßַה ַב׃ßָׁÊ דזּזֿ Ýם דבÝ public_html דַָװֹׁ 
+ַד׃ֽ XXXXX2/
+php -q /home/XXXXX1/public_html/cronS.php
+
+
+בבדׂםֿ דה ַב׃ßָׁÊַÊ ז ַבװׁזַֽÊ
+https://www.waseethost.com/support

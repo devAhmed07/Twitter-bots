@@ -1,0 +1,46 @@
+<div id="center">
+  <a style=" margin-top: 20px;margin-right: 90px;" class="btn btn-large disabled" > الهاش تاق النشط:</a>
+  <div id="tabletwi">
+
+   <table class="table table-bordered">
+    <thead>
+    <tr>
+    <th>هاش تاق نشط الان :</th>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+require_once('config/dbconfig.php');
+require_once("config/twconfig.php");
+require_once('config/twitter.class.php');
+$consumerKey = YOUR_CONSUMER_KEY;
+$consumerSecret = YOUR_CONSUMER_SECRET;
+$accessToken = $_SESSION['access_token']['oauth_token'] ;
+$accessTokenSecret = $_SESSION['access_token']['oauth_token_secret'];
+$source = mysql_query("SELECT * FROM `source`");
+while($rows = mysql_fetch_assoc($source))
+{
+$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+$status = $twitter->user_timeline($rows['name']);
+@$getHashtags = getHashtags($status['text']);
+foreach($getHashtags as $arr){
+echo '
+    <tr>
+    <td><a target="_blank" href="https://twitter.com/search?q='.urlencode($arr).'&src=hash">'.$arr.'</a></td>
+    </tr>
+	';
+}
+
+}
+?>
+    </tbody>
+    </table>
+
+
+
+  </div>
+  <div style=" margin-top: 20px;margin-right: 90px;">
+    <a class="btn btn-large btn-info" href="index.php" > -> العودة للرئيسية</a>
+  </div>
+
+</div>

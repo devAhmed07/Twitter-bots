@@ -1,0 +1,14 @@
+php -q /home/example/public_html/example/cronS.php
+
+ - ﬂ· œﬁÌﬁ…
+ - «·«„— 
+php -q /home/XXXXX1/public_html/XXXXX2/cronS.php
+XXXXX1 = «”„ «·„” Œœ„ ·ÊÕ… «·”Ì »‰·
+XXXXX2 = «”„ «·„Ã·œ «·Ì ›ÌÂ «·”ﬂ—» 
+«–« ﬂ«‰ «·”ﬂ—»  „ÊÃÊœ ›Ì „·› public_html „»«‘—… 
+«„”Õ XXXXX2/
+php -q /home/XXXXX1/public_html/cronS.php
+
+
+··„“Ìœ „‰ «·”ﬂ—» «  Ê «·‘—ÊÕ« 
+https://www.waseethost.com/support
