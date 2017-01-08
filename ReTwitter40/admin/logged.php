@@ -14,7 +14,7 @@ if(!$user && !$password) {
     header('Location:index.php');
 }else {
 
-$sql=mysql_query("select * from admincp where  Username='$user' and Password='$password' ") ;
+$sql=mysql_query("select * from AdminCp where  Username='$user' and Password='$password' ") ;
 $row=mysql_fetch_assoc($sql);
 
 if($user==$row['Username'] && $password==$row['Password']){
