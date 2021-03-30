@@ -1,4 +1,3 @@
-# سكربتات الوسيط هوست
 جميع برمجياتي مجانا هنا
 
 # سكربت التغريد التلقائي
@@ -15,4 +14,4 @@ ReTwitter40
 
 
 
-##ahmed almalki > 00966572134007 > https://twitter.com/Mr_Ahmed_96
+##ahmed almalki > https://twitter.com/devAhmed07
